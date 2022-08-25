@@ -67,7 +67,7 @@ function Why() {
                 key={cardDetail.title}
                 title={cardDetail.title}
                 detail={cardDetail.content}
-                cssClass={i % 2 == 0 ? "leftCard" : "rightCard"}
+                cssClass={i % 2 === 0 ? "leftCard" : "rightCard"}
               ></Card>
             );
           })}
@@ -81,7 +81,7 @@ function Why() {
                 key={cardDetail.title}
                 title={cardDetail.title}
                 detail={cardDetail.content}
-                cssClass={i % 2 == 0 ? "leftCard" : "rightCard"}
+                cssClass={i % 2 === 0 ? "leftCard" : "rightCard"}
               ></Card>
             );
           })}
