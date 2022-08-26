@@ -4,13 +4,8 @@ import styled from "styled-components";
 import { FilledButton } from "./Buttons";
 import cover from "../assets/coverHero.png";
 import { motion } from "framer-motion";
-
-const Heading = styled(motion.h2)`
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 72px;
-  color: #111d5e;
-`;
+import { Slide } from "react-awesome-reveal";
+import SectionHead from "./SectionHead";
 
 const PurpleLink = styled.a`
   color: var(--primary);
@@ -63,6 +58,11 @@ const bounceTransition = {
 const mq = window.matchMedia("(max-width: 600px)").matches;
 let height;
 height = mq ? "auto" : `calc(100vh - ${56}px)`;
+const sectionHead = [
+  "Empowering Developers",
+  <br />,
+  "for a remote-first world",
+];
 function Landing() {
   return (
     <Grid
@@ -78,21 +78,7 @@ function Landing() {
         lg={6}
         className="d-flex flex-column justify-content-center"
       >
-        <Heading
-          initial={{
-            x: -800,
-            opacity: 0,
-            transition: { type: "spring", duration: 2.5 },
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            transition: { type: "spring", duration: 2.5 },
-          }}
-        >
-          Empowering Developers <br />
-          for a remote-first world
-        </Heading>
+        <SectionHead text={sectionHead} />
         <motion.div
           transition={bounceTransition}
           animate={{

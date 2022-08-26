@@ -4,6 +4,7 @@ import laptopGirl from "../assets/girlLaptop2x.png";
 import { Profile } from "../subcomponents/AllSvgs";
 import Card from "../subcomponents/Card";
 import { Roll } from "react-awesome-reveal";
+import SectionHead from "../subcomponents/SectionHead";
 
 const StepsContainer = styled.div`
   width: 100vw;
@@ -65,9 +66,9 @@ function Steps() {
         <img src={laptopGirl} alt="laptop-girl" />
       </ImgContainer>
       <Content>
-        <h3>It's as easy as ABC</h3>
+        <SectionHead text={["It's as easy as ABC"]} />
         {steps.map((cardDetails) => (
-          <Roll delay={800}>
+          <Roll delay={800} key={cardDetails.title} triggerOnce={true}>
             <Card
               title={cardDetails.title}
               detail={cardDetails.detail}

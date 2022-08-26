@@ -1,4 +1,5 @@
 import Landing from "../subcomponents/Landing";
+import Faq from "./Faq";
 import Steps from "./Steps";
 import Why from "./Why";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <Landing />
       <Why />
       <Steps />
+      <Faq />
     </div>
   );
 };

@@ -9,6 +9,7 @@ import {
   faMoneyBillTransfer,
 } from "@fortawesome/free-solid-svg-icons";
 import { colors } from "../globalStyles";
+import SectionHead from "../subcomponents/SectionHead";
 
 const Container = styled.div`
   height: 100vh;
@@ -17,6 +18,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10vh;
 
   & .leftCard {
     -webkit-box-shadow: -5px 5px 22px 0px rgba(0, 0, 0, 0.57);
@@ -31,12 +33,6 @@ const Container = styled.div`
   }
 `;
 
-const SectionHead = styled.h3`
-  font-weight: 700;
-  font-size: 48px;
-  color: #111d5e;
-`;
-const iconStyle = { color: colors.primary };
 const row1 = [
   {
     title: "Own your professional Identity",
@@ -69,7 +65,7 @@ const row2 = [
 function Why() {
   return (
     <Container>
-      <SectionHead variant="h4">Why Join Brisk?</SectionHead>
+      <SectionHead text={["Why Join Brisk?"]} />
       <div className="d-flex justify-content-evenly w-100 mt-5">
         <JackInTheBox delay={600}>
           {row1.map((cardDetail, i) => {
