@@ -36,6 +36,11 @@ const ImgContainer = styled.div`
     }
 
     @media screen and (min-width: 400px) and (min-height: 800px) {
+      bottom: 120px;
+      left: -30px;
+    }
+
+    @media screen and (min-width: 400px) and (min-height: 870px) {
       bottom: 140px;
       left: -30px;
     }
