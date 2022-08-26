@@ -30,11 +30,18 @@ const ImgContainer = styled.div`
     width: 112px;
     height: 112px;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) and (min-width: 370px) {
       bottom: 130px;
       left: -30px;
       width: 112px;
       height: 112px;
+    }
+
+    @media screen and (max-width: 369px) {
+      bottom: 45px;
+      left: -30px;
+      width: 100px;
+      height: 100px;
     }
   }
 
@@ -44,11 +51,18 @@ const ImgContainer = styled.div`
     width: 229px;
     height: 229px;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) and (min-width: 370px) {
       top: -20px;
       right: -30px;
       width: 175px;
       height: 175px;
+    }
+
+    @media screen and (max-width: 369px) {
+      top: -20px;
+      right: -20px;
+      width: 150px;
+      height: 150px;
     }
   }
 

@@ -140,7 +140,6 @@ const Nav = () => {
                   </ListItem>
                 ))}
               </List>
-              <Divider />
               <Box>
                 <OutlinedButton variant="outlined" wt="500">
                   Sign Up
