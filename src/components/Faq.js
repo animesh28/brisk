@@ -51,6 +51,10 @@ const FAQContainer = styledComp.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media screen and (max-width: 600px) {
+      padding: 4rem 2rem;
+    }
 `;
 
 export default function Faq() {

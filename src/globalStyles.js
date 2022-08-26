@@ -34,7 +34,26 @@ const GlobalStyles = createGlobalStyle`
  header {
    position: relative !important;
  }
-`;
+
+ .mobile-rem-p {
+   @media screen and (max-width: 600px) {
+      padding: 1rem !important;
+      height: 100vh;
+   }
+ }
+ .mobile-align {
+   @media screen and (max-width: 600px) {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+   }
+ .rm-margin-mobile {
+   @media screen and (max-width: 600px) {
+      margin: 0 !important;
+   }
+ }
+}
+ `;
 
 export const absCenter = {
   position: "absolute",
@@ -46,5 +65,7 @@ export const absCenter = {
 export const colors = {
   primary: "#7739EC",
 };
+
+export const mq = window.matchMedia("(max-width: 600px)").matches;
 
 export default GlobalStyles;

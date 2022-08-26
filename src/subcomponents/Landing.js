@@ -3,9 +3,11 @@ import { Grid, Typography } from "@mui/material";
 import styled from "styled-components";
 import { FilledButton } from "./Buttons";
 import cover from "../assets/coverHero.png";
+import coverMob from "../assets/mobileCover.png";
 import { motion } from "framer-motion";
 import { Slide } from "react-awesome-reveal";
 import SectionHead from "./SectionHead";
+import { mq } from "../globalStyles";
 
 const PurpleLink = styled.a`
   color: var(--primary);
@@ -27,6 +29,13 @@ const ImgContainer = styled.div`
     left: -5px;
     width: 112px;
     height: 112px;
+
+    @media screen and (max-width: 600px) {
+      bottom: 130px;
+      left: -30px;
+      width: 112px;
+      height: 112px;
+    }
   }
 
   & .bigCircle {
@@ -34,11 +43,29 @@ const ImgContainer = styled.div`
     right: 35px;
     width: 229px;
     height: 229px;
+
+    @media screen and (max-width: 600px) {
+      top: -20px;
+      right: -30px;
+      width: 175px;
+      height: 175px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+    height: 100%;
   }
 `;
 
 const CoverImg = styled(motion.img)`
   width: 42.5rem;
+
+  @media screen and (max-width: 600px) {
+    max-width: 80vw;
+    height: fit-content;
+  }
 `;
 
 const bounceTransition = {
@@ -55,9 +82,8 @@ const bounceTransition = {
   },
 };
 
-const mq = window.matchMedia("(max-width: 600px)").matches;
-let height;
-height = mq ? "auto" : `calc(100vh - ${56}px)`;
+const height = mq ? "100vh" : `calc(100vh - ${56}px)`;
+const joinNowMargin = mq ? "40px" : "60px";
 const sectionHead = [
   "Empowering Developers",
   <br />,
@@ -70,15 +96,17 @@ function Landing() {
       rowSpacing={1}
       columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       style={{ height }}
-      className="px-5"
+      className="px-5 mobile-rem-p"
     >
       <Grid
         item
         md={12}
         lg={6}
-        className="d-flex flex-column justify-content-center"
+        className="d-flex flex-column justify-content-center mobile-align"
       >
-        <SectionHead text={sectionHead} />
+        <Slide triggerOnce={true}>
+          <SectionHead text={sectionHead} />
+        </Slide>
         <motion.div
           transition={bounceTransition}
           animate={{
@@ -91,7 +119,7 @@ function Landing() {
             style={{
               padding: "16px 54px",
               width: "200px",
-              margin: "80px 0 0 0",
+              margin: `${joinNowMargin} 0 0 0`,
               fontSize: "19px",
             }}
           >
@@ -148,7 +176,7 @@ function Landing() {
               opacity: 1,
               transition: { type: "spring", duration: 1, delay: 0.5 },
             }}
-            src={cover}
+            src={mq ? coverMob : cover}
             alt="hero"
           />
         </ImgContainer>

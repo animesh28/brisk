@@ -8,7 +8,6 @@ import {
   faListCheck,
   faMoneyBillTransfer,
 } from "@fortawesome/free-solid-svg-icons";
-import { colors } from "../globalStyles";
 import SectionHead from "../subcomponents/SectionHead";
 
 const Container = styled.div`
@@ -20,6 +19,12 @@ const Container = styled.div`
   justify-content: center;
   margin-bottom: 10vh;
 
+  & {
+    @media screen and (max-width: 600px) {
+      height: auto;
+    }
+  }
+
   & .leftCard {
     -webkit-box-shadow: -5px 5px 22px 0px rgba(0, 0, 0, 0.57);
     -moz-box-shadow: -5px 5px 22px 0px rgba(0, 0, 0, 0.57);
@@ -30,6 +35,23 @@ const Container = styled.div`
     -webkit-box-shadow: 5px 5px 22px 0px rgba(0, 0, 0, 0.57);
     -moz-box-shadow: 5px 5px 22px 0px rgba(0, 0, 0, 0.57);
     box-shadow: 5px 5px 22px 0px rgba(0, 0, 0, 0.57);
+  }
+
+  & .flex-col-mobile {
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  & .card_wrap {
+    margin-top: 5rem;
+    @media screen and (max-width: 600px) {
+      &:first-of-type {
+        margin-top: 3rem;
+      }
+
+      margin: 0;
+    }
   }
 `;
 
@@ -66,7 +88,7 @@ function Why() {
   return (
     <Container>
       <SectionHead text={["Why Join Brisk?"]} />
-      <div className="d-flex justify-content-evenly w-100 mt-5">
+      <div className="d-flex justify-content-evenly w-100 flex-col-mobile card_wrap">
         <JackInTheBox delay={600}>
           {row1.map((cardDetail, i) => {
             return (
@@ -81,7 +103,7 @@ function Why() {
           })}
         </JackInTheBox>
       </div>
-      <div className="d-flex justify-content-evenly w-100 mt-5">
+      <div className="d-flex justify-content-evenly w-100 flex-col-mobile card_wrap">
         <JackInTheBox delay={600}>
           {row2.map((cardDetail, i) => {
             return (
