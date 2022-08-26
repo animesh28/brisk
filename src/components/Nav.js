@@ -85,6 +85,7 @@ const Nav = () => {
     <AppBar position="static" color="transparent" id="main-nav">
       <Container maxWidth="xl">
         <Toolbar disableGutters style={{ justifyContent: "space-between" }}>
+          {/* Desktop Logo */}
           <Link
             href="/"
             sx={{
@@ -94,7 +95,7 @@ const Nav = () => {
           >
             <Logo />
           </Link>
-
+          {/* Mobile Nav */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -151,6 +152,7 @@ const Nav = () => {
               </Box>
             </Drawer>
           </Box>
+          {/* Mobile Logo */}
           <Box className="d-flex align-items-center">
             <Box
               sx={{
@@ -159,7 +161,7 @@ const Nav = () => {
             >
               <Logo style={absCenter} />
             </Box>
-
+            {/* Desktop Nav-Links */}
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map(({ name }) => (
                 <PageLink

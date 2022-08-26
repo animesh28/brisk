@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
     --gold: #FFD078;
     --off-white: #FFF7E7;
     --muted-grey: #878787;
+    --heading-blue: #111D5E;
 }
 
 *,*::after,*::before,h1,h2,h3,h4,h5,h6 {
@@ -40,6 +41,10 @@ export const absCenter = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
+};
+
+export const colors = {
+  primary: "#7739EC",
 };
 
 export default GlobalStyles;

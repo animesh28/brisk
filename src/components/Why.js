@@ -2,6 +2,13 @@ import React from "react";
 import { JackInTheBox } from "react-awesome-reveal";
 import styled from "styled-components";
 import Card from "../subcomponents/Card";
+import {
+  faIdCard,
+  faGlobe,
+  faListCheck,
+  faMoneyBillTransfer,
+} from "@fortawesome/free-solid-svg-icons";
+import { colors } from "../globalStyles";
 
 const Container = styled.div`
   height: 100vh;
@@ -29,17 +36,19 @@ const SectionHead = styled.h3`
   font-size: 48px;
   color: #111d5e;
 `;
-
+const iconStyle = { color: colors.primary };
 const row1 = [
   {
     title: "Own your professional Identity",
     content: "Build your Web 3.0 based verfied professional profile",
+    icon: faIdCard,
   },
 
   {
     title: "Access Global Network",
     content:
       "Never feel alone, with access to global sears mentors and masterclasene",
+    icon: faGlobe,
   },
 ];
 
@@ -48,11 +57,13 @@ const row2 = [
     title: "Get Curated Jobs",
     content:
       "Seamlessly get matched with global remote jobs based on your skills and intersest",
+    icon: faListCheck,
   },
 
   {
     title: "Pay 0% Commission",
     content: "No talent fee or commissions, you retain all your earnings.",
+    icon: faMoneyBillTransfer,
   },
 ];
 function Why() {
@@ -68,6 +79,7 @@ function Why() {
                 title={cardDetail.title}
                 detail={cardDetail.content}
                 cssClass={i % 2 === 0 ? "leftCard" : "rightCard"}
+                Icon={cardDetail.icon}
               ></Card>
             );
           })}
@@ -82,6 +94,7 @@ function Why() {
                 title={cardDetail.title}
                 detail={cardDetail.content}
                 cssClass={i % 2 === 0 ? "leftCard" : "rightCard"}
+                Icon={cardDetail.icon}
               ></Card>
             );
           })}

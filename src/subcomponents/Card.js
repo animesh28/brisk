@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { colors } from "../globalStyles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CardContainer = styled.div`
   width: 40vw;
@@ -16,6 +18,8 @@ const Circle = styled.div`
   height: 100px;
   border-radius: 50%;
   background: var(--off-white);
+  display: grid;
+  place-items: center;
 `;
 
 const Content = styled.div`
@@ -35,10 +39,16 @@ const Detail = styled.span`
   color: var(--muted-grey);
 `;
 
-function Card({ title, detail, cssClass }) {
+function Card({ title, detail, cssClass = "step-card", Icon }) {
   return (
     <CardContainer className={cssClass}>
-      <Circle></Circle>
+      <Circle>
+        {cssClass != "step-card" ? (
+          <FontAwesomeIcon icon={Icon} color={colors.primary} fontSize="40px" />
+        ) : (
+          <Icon />
+        )}
+      </Circle>
       <Content>
         <Title>{title}</Title>
         <Detail>{detail}</Detail>
