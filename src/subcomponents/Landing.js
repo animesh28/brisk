@@ -133,6 +133,8 @@ const bounceTransition = {
 
 const height = mq ? "100vh" : `calc(100vh - ${56}px)`;
 const joinNowMargin = mq ? "40px" : "60px";
+const empowerHeadMobClass = mq ? "mobile_main-head" : "";
+
 const sectionHead = [
   "Empowering Developers",
   <br />,
@@ -154,7 +156,7 @@ function Landing() {
         className="d-flex flex-column justify-content-center mobile-align"
       >
         <Slide triggerOnce={true}>
-          <SectionHead text={sectionHead} />
+          <SectionHead text={sectionHead} cssClass={empowerHeadMobClass} />
         </Slide>
         <motion.div
           transition={bounceTransition}
