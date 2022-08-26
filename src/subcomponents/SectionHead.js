@@ -9,10 +9,6 @@ const Heading = styled.h2`
   @media screen and (max-width: 600px) {
     font-size: 28px;
     line-height: 40px;
-
-    &.mobile_main-head {
-      margin-top: -5vh;
-    }
   }
 `;
 function SectionHead({ text, cssClass }) {
