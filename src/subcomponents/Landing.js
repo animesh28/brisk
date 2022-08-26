@@ -30,11 +30,36 @@ const ImgContainer = styled.div`
     width: 112px;
     height: 112px;
 
-    @media screen and (max-width: 600px) and (min-width: 370px) {
+    @media screen and (min-width: 400px) and (min-height: 700px) {
+      bottom: 60px;
+      left: -30px;
+    }
+
+    @media screen and (min-width: 400px) and (min-height: 800px) {
+      bottom: 140px;
+      left: -30px;
+    }
+
+    @media screen and (min-width: 400px) and (min-height: 900px) {
+      bottom: 150px;
+      left: -30px;
+    }
+
+    @media screen and (max-width: 399px) and (min-width: 380px) {
       bottom: 130px;
       left: -30px;
-      width: 112px;
-      height: 112px;
+    }
+
+    @media screen and (max-width: 379px) and (min-width: 370px) and (min-height: 701px) {
+      bottom: 100px;
+      left: -30px;
+    }
+
+    @media screen and (max-width: 379px) and (min-width: 370px) and (max-height: 700px) {
+      bottom: 40px;
+      left: -30px;
+      width: 90px;
+      height: 90px;
     }
 
     @media screen and (max-width: 369px) {
