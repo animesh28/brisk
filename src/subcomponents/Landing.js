@@ -69,8 +69,8 @@ const bounceTransition = {
   },
 };
 
-let height = mq ? "100vh" : `calc(100vh - ${56}px)`;
-height = miniLaptop ? "auto" : mq;
+let height = miniLaptop ? "auto" : `calc(100vh - ${56}px)`;
+height = mq ? "100vh" : mq;
 const joinNowMargin = mq ? "40px" : "60px";
 const empowerHeadMobClass = mq ? "mobile_main-head" : "";
 
