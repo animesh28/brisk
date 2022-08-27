@@ -98,7 +98,7 @@ function Steps() {
       <Content>
         {!mq ? <SectionHead text={["It's as easy as ABC"]} /> : null}
         {steps.map((cardDetails) => (
-          <Roll delay={800} key={cardDetails.title} triggerOnce={true}>
+          <Roll delay={800} key={cardDetails.title}>
             <Card
               title={cardDetails.title}
               detail={cardDetails.detail}

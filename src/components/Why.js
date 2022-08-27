@@ -89,7 +89,7 @@ function Why() {
     <Container>
       <SectionHead text={["Why Join Brisk?"]} />
       <div className="d-flex justify-content-evenly w-100 flex-col-mobile card_wrap">
-        <JackInTheBox delay={600}>
+        <JackInTheBox delay={300}>
           {row1.map((cardDetail, i) => {
             return (
               <Card
@@ -104,7 +104,7 @@ function Why() {
         </JackInTheBox>
       </div>
       <div className="d-flex justify-content-evenly w-100 flex-col-mobile card_wrap">
-        <JackInTheBox delay={600}>
+        <JackInTheBox delay={300}>
           {row2.map((cardDetail, i) => {
             return (
               <Card

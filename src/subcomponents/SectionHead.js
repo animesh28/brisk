@@ -10,6 +10,11 @@ const Heading = styled.h2`
     font-size: 28px;
     line-height: 40px;
   }
+
+  @media screen and (max-width: 380px) and (max-height: 700px) {
+    font-size: 24px;
+    line-height: 40px;
+  }
 `;
 function SectionHead({ text, cssClass }) {
   return (

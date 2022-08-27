@@ -47,12 +47,13 @@ const GlobalStyles = createGlobalStyle`
       text-align: center;
       width: 100%;
    }
- .rm-margin-mobile {
-   @media screen and (max-width: 600px) {
-      margin: 0 !important;
-   }
- }
+   
 }
+.rm-margin-mobile {
+     @media screen and (max-width: 600px) {
+        margin: 0 !important;
+     }
+   }
  `;
 
 export const absCenter = {

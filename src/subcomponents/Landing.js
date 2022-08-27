@@ -17,6 +17,13 @@ const PurpleLink = styled.a`
 const ImgContainer = styled.div`
   position: relative;
 
+  @media screen and (max-width: 600px) {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   & .circle {
     position: absolute;
     border-radius: 50%;
@@ -29,55 +36,6 @@ const ImgContainer = styled.div`
     left: -5px;
     width: 112px;
     height: 112px;
-
-    @media screen and (min-width: 400px) and (min-height: 700px) {
-      bottom: 60px;
-      left: -30px;
-    }
-
-    @media screen and (min-width: 400px) and (min-height: 800px) {
-      bottom: 120px;
-      left: -30px;
-    }
-
-    @media screen and (min-width: 400px) and (min-height: 870px) {
-      bottom: 140px;
-      left: -30px;
-    }
-
-    @media screen and (min-width: 400px) and (min-height: 900px) {
-      bottom: 150px;
-      left: -30px;
-    }
-
-    @media screen and (max-width: 399px) and (min-width: 380px) and (min-height: 800px) {
-      bottom: 130px;
-      left: -30px;
-    }
-
-    @media screen and (max-width: 399px) and (min-width: 380px) and (max-height: 740px) {
-      bottom: 70px;
-      left: -30px;
-    }
-
-    @media screen and (max-width: 379px) and (min-width: 370px) and (min-height: 701px) {
-      bottom: 100px;
-      left: -30px;
-    }
-
-    @media screen and (max-width: 379px) and (min-width: 370px) and (max-height: 700px) {
-      bottom: 40px;
-      left: -30px;
-      width: 90px;
-      height: 90px;
-    }
-
-    @media screen and (max-width: 369px) {
-      bottom: 45px;
-      left: -30px;
-      width: 100px;
-      height: 100px;
-    }
   }
 
   & .bigCircle {
@@ -85,26 +43,6 @@ const ImgContainer = styled.div`
     right: 35px;
     width: 229px;
     height: 229px;
-
-    @media screen and (max-width: 600px) and (min-width: 370px) {
-      top: -20px;
-      right: -30px;
-      width: 175px;
-      height: 175px;
-    }
-
-    @media screen and (max-width: 369px) {
-      top: -20px;
-      right: -20px;
-      width: 150px;
-      height: 150px;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    display: flex;
-    justify-content: center;
-    height: 100%;
   }
 `;
 
@@ -191,33 +129,36 @@ function Landing() {
         className="d-flex align-items-center justify-content-center"
       >
         <ImgContainer>
-          <motion.span
-            initial={{
-              x: 200,
-              y: -200,
-              transition: { type: "spring", duration: 3 },
-            }}
-            animate={{
-              x: 0,
-              y: 0,
-              transition: { type: "spring", duration: 3 },
-            }}
-            className="circle smallCircle"
-          ></motion.span>
-          <motion.span
-            initial={{
-              x: -200,
-              y: 200,
-              transition: { type: "spring", duration: 3 },
-            }}
-            animate={{
-              x: 0,
-              y: 0,
-              transition: { type: "spring", duration: 3 },
-            }}
-            className="circle bigCircle"
-          ></motion.span>
-
+          {!mq ? (
+            <>
+              <motion.span
+                initial={{
+                  x: 200,
+                  y: -200,
+                  transition: { type: "spring", duration: 3 },
+                }}
+                animate={{
+                  x: 0,
+                  y: 0,
+                  transition: { type: "spring", duration: 3 },
+                }}
+                className="circle smallCircle"
+              ></motion.span>
+              <motion.span
+                initial={{
+                  x: -200,
+                  y: 200,
+                  transition: { type: "spring", duration: 3 },
+                }}
+                animate={{
+                  x: 0,
+                  y: 0,
+                  transition: { type: "spring", duration: 3 },
+                }}
+                className="circle bigCircle"
+              ></motion.span>
+            </>
+          ) : null}
           <CoverImg
             initial={{
               opacity: 0,

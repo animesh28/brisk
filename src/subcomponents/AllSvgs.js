@@ -131,3 +131,33 @@ export const Telegram = (props) => (
     </defs>
   </svg>
 );
+
+export const NextIcon = (props) => (
+  <svg
+    width={25}
+    height={15}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M.414 8.189a1 1 0 0 1 0-1.415L6.778.41a1 1 0 1 1 1.414 1.415L2.536 7.48l5.656 5.657a1 1 0 1 1-1.414 1.415L.414 8.189Zm24.346.292H1.12v-2H24.76v2Z"
+      fill="#10375C"
+    />
+  </svg>
+);
+
+export const PreviousIcon = (props) => (
+  <svg
+    width={25}
+    height={15}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M24.596 8.189a1 1 0 0 0 0-1.415L18.232.41a1 1 0 1 0-1.415 1.415l5.657 5.656-5.657 5.657a1 1 0 0 0 1.415 1.415l6.364-6.364ZM.25 8.48h23.638v-2H.25v2Z"
+      fill="#10375C"
+    />
+  </svg>
+);
