@@ -4,7 +4,6 @@ import { Paper } from "@mui/material";
 import { PreviousIcon, NextIcon } from "../subcomponents/AllSvgs";
 import styled from "styled-components";
 import saidur from "../assets/saidur.png";
-import { mq } from "../globalStyles";
 
 const CarouselContainer = styled.div`
   padding: 3rem 6rem;
@@ -58,8 +57,8 @@ const CarouselContainer = styled.div`
           line-height: 35px;
         }
 
-        @media screen and (max-width: 760px) {
-          font-size: 18px;
+        @media screen and (max-width: 500px) {
+          font-size: 16px;
           line-height: 35px;
         }
       }
@@ -104,6 +103,8 @@ function Testimonials(props) {
     {
       description:
         "I strongly recommend this platform in closure of various senior positions in my organization.The profiling of the candidates gives an edge when short-listing profiles.",
+      excerpt:
+        "The profiling of the candidates gives an edge when short-listing profiles.",
       img: saidur,
       name: "Lorem Ipsum",
       designation: "Manager, XYZ Company",
@@ -147,7 +148,7 @@ function Testimonials(props) {
 function Item({ item }) {
   return (
     <Paper className="author-container">
-      <h2>{mq ? item.excerpt : item.description}</h2>
+      <h2>{item.description}</h2>
 
       <Author>
         <img src={item.img} alt="author" />
@@ -175,7 +176,8 @@ const Author = styled.div`
 
   img {
     @media screen and (max-width: 760px) {
-      display: none;
+      width: 50px;
+      height: 50px;
     }
   }
 `;
@@ -185,20 +187,16 @@ const AuthorDetails = styled.div`
   flex-direction: column;
   margin-left: 20px;
 
-  @media screen and (max-width: 760px) {
-    margin-left: 0;
-  }
-
   & .name {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 28px;
     color: var(--primary);
   }
 
   & .designation {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 28px;
     color: var(--heading-blue);
     text-decoration-line: underline;
