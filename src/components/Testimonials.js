@@ -70,6 +70,10 @@ const CarouselContainer = styled.div`
     @media screen and (max-width: 760px) {
       bottom: 6vh !important;
     }
+
+    @media screen and (max-width: 760px) {
+      bottom: 4.5vh !important;
+    }
   }
 
   //next btn
