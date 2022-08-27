@@ -15,10 +15,11 @@ const StepsContainer = styled.div`
   grid-gap: 8rem;
   padding: 0 6rem;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1320px) {
     height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 0 2rem;
     padding-bottom: 5rem;
   }
@@ -64,8 +65,12 @@ const Content = styled.div`
     -moz-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.57);
     box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.57);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1320px) {
+      margin: 4vh 0;
       height: auto;
+    }
+
+    @media screen and (max-width: 600px) {
     }
   }
 `;

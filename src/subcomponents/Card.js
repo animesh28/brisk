@@ -12,14 +12,18 @@ const CardContainer = styled.div`
   border: 1px solid #e3e3e3;
   border-radius: 20px;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1200px) {
     padding: 35px 20px;
-    width: 90vw;
+    width: 70vw;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 90vw;
   }
 `;
 
@@ -31,7 +35,7 @@ const Circle = styled.div`
   display: grid;
   place-items: center;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1200px) {
     margin: 14px;
   }
 `;
@@ -41,7 +45,7 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1200px) {
     text-align: center;
   }
 `;

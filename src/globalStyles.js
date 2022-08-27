@@ -35,14 +35,18 @@ const GlobalStyles = createGlobalStyle`
    position: relative !important;
  }
 
- .mobile-rem-p {
+ .landing-container {
+   @media screen and (max-width: 1200px) {
+      justify-content: center;
+   }
+
    @media screen and (max-width: 600px) {
       padding: 1rem !important;
       height: 100vh;
    }
  }
  .mobile-align {
-   @media screen and (max-width: 600px) {
+   @media screen and (max-width: 1200px) {
       align-items: center;
       text-align: center;
       width: 100%;
@@ -68,5 +72,6 @@ export const colors = {
 };
 
 export const mq = window.matchMedia("(max-width: 600px)").matches;
+export const miniLaptop = window.matchMedia("(max-width: 1200px)").matches;
 
 export default GlobalStyles;

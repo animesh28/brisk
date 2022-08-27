@@ -20,7 +20,7 @@ const Container = styled.div`
   margin-bottom: 10vh;
 
   & {
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1200px) {
       height: auto;
     }
   }
@@ -38,13 +38,23 @@ const Container = styled.div`
   }
 
   & .flex-col-mobile {
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1200px) {
       flex-direction: column;
     }
   }
 
   & .card_wrap {
     margin-top: 5rem;
+    @media screen and (max-width: 1200px) {
+      &:first-of-type {
+        margin-top: 3rem;
+      }
+      margin: 0;
+
+      display: flex;
+      align-items: center;
+    }
+
     @media screen and (max-width: 600px) {
       &:first-of-type {
         margin-top: 3rem;

@@ -7,7 +7,7 @@ import coverMob from "../assets/mobileCover.png";
 import { motion } from "framer-motion";
 import { Slide } from "react-awesome-reveal";
 import SectionHead from "./SectionHead";
-import { mq } from "../globalStyles";
+import { mq, miniLaptop } from "../globalStyles";
 
 const PurpleLink = styled.a`
   color: var(--primary);
@@ -49,7 +49,7 @@ const ImgContainer = styled.div`
 const CoverImg = styled(motion.img)`
   width: 42.5rem;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1200px) {
     max-width: 80vw;
     height: fit-content;
   }
@@ -69,7 +69,8 @@ const bounceTransition = {
   },
 };
 
-const height = mq ? "100vh" : `calc(100vh - ${56}px)`;
+let height = mq ? "100vh" : `calc(100vh - ${56}px)`;
+height = miniLaptop ? "auto" : mq;
 const joinNowMargin = mq ? "40px" : "60px";
 const empowerHeadMobClass = mq ? "mobile_main-head" : "";
 
@@ -85,7 +86,7 @@ function Landing() {
       rowSpacing={1}
       columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       style={{ height }}
-      className="px-5 mobile-rem-p"
+      className="px-5 landing-container"
     >
       <Grid
         item
