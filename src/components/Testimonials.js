@@ -150,7 +150,7 @@ function Item({ item }) {
       <h2>{mq ? item.excerpt : item.description}</h2>
 
       <Author>
-        <img src={item.img} alt="author-photo" />
+        <img src={item.img} alt="author" />
         <AuthorDetails>
           <span className="name">{item.name}</span>
           <span className="designation">{item.designation}</span>
